@@ -9,7 +9,6 @@ try {
         obj.data.adverts = [];
     }
     body = JSON.stringify(obj);
-    console.log("Merach AdScript Body: " + body);
 } catch (error) {
     console.log("Merach AdScript Error: " + error);
 }
