@@ -5,8 +5,8 @@
 let body = $response.body;
 try {
     let obj = JSON.parse(body);
-    if (obj.data && obj.data.adverts) {
-        obj.data.adverts[0].endTime = "2026-01-08 00:00:00";
+    if (obj.data && obj.data.id != 41) {
+        obj.data.adverts = [];
     }
     body = JSON.stringify(obj);
     console.log("Merach AdScript Body: " + body);
