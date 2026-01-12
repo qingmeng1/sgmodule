@@ -5,7 +5,7 @@
 let body = $response.body;
 try {
     let obj = JSON.parse(body);
-    if (obj.data && obj.data.adverts) {
+    if (obj.data) {
         obj.data.adverts = [];
         obj.data.adverts[0].productIds = [];
     }
