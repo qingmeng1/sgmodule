@@ -8,6 +8,7 @@ try {
     if (obj.data && obj.data.adverts) {
         obj.data.adverts = [];
         obj.data.adverts[0].productIds = [];
+        obj.data.adverts[0].endTime = "2026-01-01 00:00:00";
     }
     body = JSON.stringify(obj);
 } catch (error) {
