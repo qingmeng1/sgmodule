@@ -6,7 +6,7 @@ let body = $response.body;
 try {
     let obj = JSON.parse(body);
     if (obj.data && obj.data.adverts) {
-        obj.data.adverts = [];
+        obj.data.adverts = [{productIds: []}];
     }
     body = JSON.stringify(obj);
     console.log("Merach AdScript Body: " + body);
