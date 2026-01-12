@@ -1,0 +1,9 @@
+#!name=Merach去广告
+#!desc=移除麦瑞克App广告
+#!category=去广告
+
+[Script]
+Merach_Splash = type=http-response, pattern=^https:\/\/api\.merach\.com\/app\/AppAdvertisingController\/getAdvert, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/qingmeng1/sgmodule/refs/heads/main/script/merach.js, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% api.merach.com
