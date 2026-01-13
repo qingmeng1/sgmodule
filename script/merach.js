@@ -6,8 +6,7 @@ let body = $response.body;
 try {
     let obj = JSON.parse(body);
     if (obj.data && obj.data.id == 41) {
-        obj.data.adverts = obj.data.adverts.filter(ad => ad.id === "741");
-        console.log("Merach AdScript body: " + obj);
+        obj.data.adverts = obj.data.adverts.filter(ad => ad.id === "740");
     } else {
         obj.data.adverts = [];
     }
