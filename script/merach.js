@@ -5,7 +5,9 @@
 let body = $response.body;
 try {
     let obj = JSON.parse(body);
-    if (obj.data && obj.data.id != 41) {
+    if (obj.data && obj.data.id == 41) {
+        ojb.data.adverts = obj.data.adverts.filter(ad => ad.id === "741");
+    } else {
         obj.data.adverts = [];
     }
     body = JSON.stringify(obj);
