@@ -3,10 +3,11 @@
  */
 
 let body = $response.body;
+let targetIds = ["731", "733", "740"];
 try {
     let obj = JSON.parse(body);
     if (obj.data && obj.data.id == 41) {
-        obj.data.adverts = obj.data.adverts.filter(ad => ad.id === "740");
+        obj.data.adverts = obj.data.adverts.filter(ad => targetIds.includes(ad.id));
     } else {
         obj.data.adverts = [];
     }
